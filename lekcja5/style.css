@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.postcard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: #57C785;
+background: linear-gradient(90deg,rgba(87, 199, 133, 1) 0%, rgba(39, 153, 182, 1) 0%, rgba(27, 141, 194, 1) 100%, rgba(120, 0, 0, 1) 49%, rgba(129, 16, 6, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  background: #fbfb3f;
+background: radial-gradient(circle,rgba(251, 251, 63, 1) 0%, rgba(156, 78, 61, 1) 100%);
+border-radius: 50%;
+box-shadow: 0 0 40px 10px hsl(45, 100%, 80%)
+}
+
+.hills {
+  position: absolute;
+  bottom: 2%;
+  left: -10%;
+  width: 150%;
+  height: 60%;
+  background: #55730f;
+background: linear-gradient(90deg,rgba(85, 115, 15, 1) 0%, rgba(125, 212, 59, 1) 50%, rgba(95, 128, 29, 1) 100%);
+border-radius: 70%;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  background: #0d00ff;
+background: linear-gradient(90deg,rgba(13, 0, 255, 1) 0%, rgba(0, 0, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  text-shadow: 9px 10px 10px rgba(0, 0, 0, 0.30);
+}
+
+.cloud {
+    height: 100px;
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #ffffff;
+}
